@@ -14,8 +14,8 @@ function SendMessage({ endOfMessageRef }) {
     messages
       .save({
         message: message,
-        username: user.getUsername(),
-        ethAddress: user.get("ethAddress"),
+        username: user?.getUsername(),
+        ethAddress: user?.get("ethAddress"),
       })
       .then(
         (message) => {},
@@ -32,7 +32,7 @@ function SendMessage({ endOfMessageRef }) {
         type="text"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        placeholder={`please send your message ${user.getUsername()}`}
+        placeholder={`please send your message ${user?.getUsername()}`}
         className="flex-grow outline-none bg-transparent text-white placeholder-gray-500"
       />
       <button

@@ -44,7 +44,7 @@ function Messages() {
       </div>
 
       <div className="text-gray-400 text-center" ref={endOfMessageRef}>
-        <p>You are up to date {user.getUsername()}</p>
+        <p>You are up to date {user?.getUsername()}</p>
       </div>
     </div>
   );

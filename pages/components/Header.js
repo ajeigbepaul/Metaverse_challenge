@@ -23,7 +23,7 @@ function Header() {
           </div>
           <h1 className="text-3xl ">Welcome to the COMMUNITY Metaverse</h1>
           <h2 className=" font-bold truncate text-5xl ">
-            {user.getUsername()}
+            {user?.getUsername()}
           </h2>
           {/* Change username */}
           <ChangeUsername />

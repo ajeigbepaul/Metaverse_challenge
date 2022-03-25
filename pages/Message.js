@@ -5,7 +5,7 @@ import TimeAgo from "timeago-react";
 
 function Message({ message }) {
   const { user } = useMoralis();
-  const isUserMessage = message.get("ethAddress") === user.get("ethAddress");
+  const isUserMessage = message?.get("ethAddress") === user?.get("ethAddress");
   return (
     <div
       className={`flex space-x-3 items-end relative mr-5 ${
@@ -13,7 +13,7 @@ function Message({ message }) {
       }`}
     >
       <div className={`relative h-8 w-8 ${isUserMessage && "order-last ml-2"}`}>
-        <Avatar username={user.get("username")} />
+        <Avatar username={user?.get("username")} />
       </div>
       <div
         className={`flex space-x-4 p-3 rounded-lg ${
@@ -22,7 +22,7 @@ function Message({ message }) {
             : "rounded-bl-none bg-blue-400"
         }`}
       >
-        <p>{message.get("message")}</p>
+        <p>{message?.get("message")}</p>
       </div>
       {/* timeago */}
       <TimeAgo
@@ -37,7 +37,7 @@ function Message({ message }) {
           isUserMessage ? "text-pink-300" : "text-blue-400"
         }`}
       >
-        {user.get("username")}
+        {user?.get("username")}
       </p>
     </div>
   );

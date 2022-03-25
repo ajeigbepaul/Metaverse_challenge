@@ -9,7 +9,7 @@ function Avatar({ username, logoutOnPress }) {
       className="bg-black rounded-full cursor-pointer hover:opacity-80 object-cover"
       layout="fill"
       src={`https://avatars.dicebear.com/api/pixel-art/${
-        username || user.get("username")
+        username || user?.get("username")
       }.svg`}
       onClick={() => logoutOnPress && logout()}
     />
