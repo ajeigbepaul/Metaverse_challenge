@@ -29,7 +29,7 @@ function Message({ message }) {
         className={`text-pink-200 text-[10px] ${
           isUserMessage && "order-first pr-1"
         }`}
-        datetime={message.createdAt}
+        datetime={message?.createdAt}
       />
 
       <p
